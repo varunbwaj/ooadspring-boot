@@ -1,0 +1,13 @@
+package com.varunbwaj.ooadproj;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class OoadprojApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
