@@ -1,9 +1,8 @@
 HELP.md
-.DS_Store
+*.DS_Store
 target/
 javascript/
-src/main/resources/streamlit/backend/__pycache__
-src/main/resources/streamlit/frontend/__pycache__
+*__pycache__
 src/main/resources/streamlit/backend/javascript
 src/main/resources/streamlit/backend/test.py
 !.mvn/wrapper/maven-wrapper.jar
