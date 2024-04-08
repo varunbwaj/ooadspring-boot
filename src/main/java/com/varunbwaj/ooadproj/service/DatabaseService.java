@@ -29,10 +29,6 @@ public class DatabaseService {
         jdbcTemplate.update(query, args);
     }
 
-    public int executeUpdate(String query, Object... args) {
-        return jdbcTemplate.update(query, args);
-    }
-
     public Map<String, Object> queryForMap(String query, Object... args) {
         return jdbcTemplate.queryForMap(query, args);
     }
