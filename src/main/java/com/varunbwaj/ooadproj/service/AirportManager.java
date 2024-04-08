@@ -35,7 +35,7 @@ public class AirportManager {
     }
 
     public List<Map<String, Object>> getAirlineNamesGeneral() {
-        return databaseService.queryForList("SELECT AirlineName FROM airlines");
+        return databaseService.queryForList("SELECT AirlineName FROM Airlines");
     }
 
     public List<Map<String, Object>> getUniqueAirplanes() {
