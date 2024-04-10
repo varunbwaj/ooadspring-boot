@@ -1,5 +1,10 @@
 HELP.md
+*.DS_Store
 target/
+javascript/
+*__pycache__
+src/main/resources/streamlit/backend/javascript
+src/main/resources/streamlit/backend/test.py
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -31,3 +36,4 @@ build/
 
 ### VS Code ###
 .vscode/
+
