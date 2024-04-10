@@ -27,8 +27,13 @@ public class LogsManager {
     }
 
     public String pushLog(String radios, String subject, String body) {
-        String sqlQuery = "INSERT INTO CommunicationLog (MessageType, MessageSubject, MessageBody, SentDate) VALUES (?, ?, ?, CURRENT_TIMESTAMP)";
-        databaseService.update(sqlQuery, radios, subject, body);
-        return "Log added successfully";
+
+        if (radios != "" && subject != "" && body != ""){
+            String sqlQuery = "INSERT INTO CommunicationLog (MessageType, MessageSubject, MessageBody, SentDate) VALUES (?, ?, ?, CURRENT_TIMESTAMP)";
+            databaseService.update(sqlQuery, radios, subject, body);
+            return "Log added successfully";
+        }else{
+            return "Please Fill All fields";
+        }
     }
 }

@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.Map;
 import com.varunbwaj.ooadproj.service.AirportManager;
 import com.varunbwaj.ooadproj.service.AuthManager;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class AirportController {
@@ -58,6 +61,12 @@ public class AirportController {
     public List<Map<String, Object>> getResourceInventory() {
         return inventoryManager.getResourceInventory();
     }
+
+    @GetMapping("/inventory/resource/{resource_id}")
+    public Map<String, Object> getResourceData(@PathVariable String resource_id) {
+        return inventoryManager.getResourceData(resource_id);
+    }
+    
 
     @GetMapping("/stats/airnames")
     public List<Map<String, Object>> getAirlineNames() {

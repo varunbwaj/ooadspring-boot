@@ -71,19 +71,12 @@ def disp():
                 ''')
     with st.container():
         st.write("");st.header("Push a New Message?")
-        Subject=None;body=None;radios=None
-        with st.form("my_form2", clear_on_submit=True):
-            st.text_input('Message Subject',key='Subject')
-            st.text_input("Message Body",key='body')
-            radios = st.radio('Message Type',options=['Notification', 'Emergency'])
-            st.form_submit_button('Submit',on_click=submitted)
-            Subject=str(st.session_state.Subject)
-            body=str(st.session_state.body)
-        if Subject!=None and radios!=None and body!=None and Subject!="" and body!="" and radios!="":
-            if 'submitted' in st.session_state and st.session_state.submitted==True:
-                operate_str=f"INSERT INTO CommunicationLog (MessageType,\
-                            MessageSubject, MessageBody, SentDate)\
-                            VALUES ('{radios}', '{Subject}', '{body}', CURRENT_TIMESTAMP);"
-                if push_message(radios,Subject,body) == 200:
-                    st.success("New message added")
-                reset()
+        subject = st.text_input('Message Subject', key='subject')
+        body = st.text_input("Message Body", key='body')
+        radios = st.radio('Message Type', options=['Notification', 'Emergency'])
+        if st.button('Submit'):
+            if push_message(radios, subject, body)==200:
+                st.success("Successfully Added")
+            else:
+                st.error("Please fill all fields")
+            reset()  
