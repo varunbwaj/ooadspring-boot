@@ -1,6 +1,5 @@
 package com.varunbwaj.ooadproj.service;
-import com.varunbwaj.ooadproj.service.DatabaseService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +8,7 @@ import java.util.Map;
 public class AirportManager {
     private final DatabaseService databaseService;
 
-    @Autowired
+
     public AirportManager(DatabaseService databaseService) {
         this.databaseService = databaseService;
     }

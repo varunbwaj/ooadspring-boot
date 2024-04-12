@@ -1,23 +1,18 @@
 package com.varunbwaj.ooadproj.controller;
 
 import com.varunbwaj.ooadproj.facade.AirportFacade;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
 public class AirportController {
     private final AirportFacade airportFacade;
 
-    @Autowired
     public AirportController(AirportFacade airportFacade) {
         this.airportFacade = airportFacade;
     }

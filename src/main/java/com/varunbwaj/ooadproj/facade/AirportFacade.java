@@ -4,9 +4,7 @@ import com.varunbwaj.ooadproj.service.AirportManager;
 import com.varunbwaj.ooadproj.service.AuthManager;
 import com.varunbwaj.ooadproj.service.InventoryManager;
 import com.varunbwaj.ooadproj.service.LogsManager;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +15,6 @@ public class AirportFacade {
     private final InventoryManager inventoryManager;
     private final LogsManager logsManager;
 
-    @Autowired
     public AirportFacade(AirportManager airportManager, AuthManager authManager, InventoryManager inventoryManager, LogsManager logsManager) {
         this.airportManager = airportManager;
         this.authManager = authManager;

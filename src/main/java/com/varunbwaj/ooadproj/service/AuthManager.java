@@ -1,11 +1,6 @@
 package com.varunbwaj.ooadproj.service;
 
-//public class AuthManager {
-//}
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +8,6 @@ import java.util.Map;
 public class AuthManager {
     private final DatabaseService databaseService;
 
-    @Autowired
     public AuthManager(DatabaseService databaseService) {
         this.databaseService = databaseService;
     }

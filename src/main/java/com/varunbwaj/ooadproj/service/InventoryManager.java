@@ -1,9 +1,6 @@
 package com.varunbwaj.ooadproj.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +8,6 @@ import java.util.Map;
 public class InventoryManager {
     private final DatabaseService databaseService;
 
-    @Autowired
     public InventoryManager(DatabaseService databaseService) {
         this.databaseService = databaseService;
     }
