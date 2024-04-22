@@ -84,20 +84,5 @@ The `Auth` class is responsible for user authentication and authorization. It pr
 
 The `DatabaseService` class is a utility class that provides methods for interacting with a database using JDBC. It includes methods for executing queries, updates, and retrieving data in various formats.
 
-## Usage
 
-The `AirportController` class serves as the main entry point for the system. Clients can interact with the system by calling the appropriate methods on the `AirportController` instance, which will delegate tasks to the respective classes as needed.
 
-Example usage:
-
-```java
-AirportController controller = new AirportController();
-
-// Restock a resource
-String result = controller.restockResource("Fuel", "123");
-
-// Push a log entry
-String logResult = controller.pushLog("Radio1, Radio2", "Fuel Delivery", "Fuel delivery completed.");
-
-// Add a new user
-String authResult = controller.addUser(new HashMap<String, Object>() {{ put("username", "user1"); put("password", "pass123"); }});
