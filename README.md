@@ -83,6 +83,3 @@ The `Auth` class is responsible for user authentication and authorization. It pr
 ### DatabaseService
 
 The `DatabaseService` class is a utility class that provides methods for interacting with a database using JDBC. It includes methods for executing queries, updates, and retrieving data in various formats.
-
-
-
